@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 250, 244, 237; 
+    --background-mid1-rgb: 250, 233, 248; 
+    --background-mid2-rgb: 226, 243, 250; 
+    --background-end-rgb: 240, 245, 247; 
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to right,
+      rgb(var(--background-start-rgb)) 0%, 
+      rgb(var(--background-mid1-rgb)) 58%, 
+      rgb(var(--background-mid2-rgb)) 100%, 
+      rgb(var(--background-mid2-rgb)) 100%, 
+      rgb(var(--background-end-rgb)) 100% 
+    );
+}
+
+/* .navbarLink {
+  color: black;
+  font-size:10px;
+} */
+
+.navbarButton {
+  color: white;
+  background-color: #004370;
+}
+
+.selected {
+  border: 2px solid blue;
+}
