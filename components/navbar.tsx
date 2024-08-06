@@ -26,11 +26,11 @@ const Navbar: React.FC<NavbarProps> = ({
     setIsModalOpen(false);
   };
 
-  const handleSaveWeek = (week: string) => {
+  const handleSaveWeek = (week: keyof WeekMeals) => {
     onAddToWeek(week);
   };
 
-  const linkClassName = (week: string) => `
+  const linkClassName = (week: keyof WeekMeals | "all") => `
     text-black text-xs font-bold px-12 ${
       activeWeek === week ? "border-b-2 border-blue-600" : ""
     } 
@@ -86,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({
       {isModalOpen && (
         <SelectWeekModal
           onClose={handleCloseModal}
-          onSave={handleSaveWeek}
+          onSave={(week: string) => handleSaveWeek(week as keyof WeekMeals)}
           selectedMeals={selectedMeals}
         />
       )}
