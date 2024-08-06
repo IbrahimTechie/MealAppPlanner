@@ -6,7 +6,7 @@ const Header = () => {
     <div className="relative flex justify-center items-center w-full h-32 sm:h-56">
       <div className="absolute inset-0">
         <Image
-          src={"/images/pizza.jpg"}
+          src={"/pizza.jpg"}
           alt={"Pizza"}
           layout="fill"
           objectFit="cover"
